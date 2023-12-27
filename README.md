@@ -1,1 +1,1 @@
-# Django_eCStore
+# Django_oopCStore
