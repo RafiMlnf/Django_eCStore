@@ -1,5 +1,6 @@
-{% extends 'ecom/admin_base.html' %} {% load widget_tweaks %} {% block content
-%}
+{% extends 'ecom/admin_base.html' %}
+{% load widget_tweaks %}
+{% block content %}
 
 <head>
   <style media="screen">
@@ -10,19 +11,9 @@
     .note {
       text-align: center;
       height: 80px;
-      background: #0f2027; /* fallback for old browsers */
-      background: -webkit-linear-gradient(
-        to left,
-        #2c5364,
-        #203a43,
-        #0f2027
-      ); /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(
-        to left,
-        #2c5364,
-        #203a43,
-        #0f2027
-      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: #0F2027;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       color: #fff;
       font-weight: bold;
       line-height: 80px;
@@ -53,15 +44,11 @@
     }
   </style>
 
-  <link
-    href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-    rel="stylesheet"
-    id="bootstrap-css"
-  />
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<br /><br /><br /><br /><br /><br />
+<br><br><br><br><br><br>
 <!------ update page for doctor by admin(sumit)  ---------->
 <form method="post" enctype="multipart/form-data">
   {% csrf_token %}
@@ -75,26 +62,25 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="">Product Name</label>
-              {% render_field productForm.name class="form-control"
-              placeholder="Product Name" %}
+              {% render_field productForm.name class="form-control" placeholder="Product Name" %}
             </div>
             <div class="form-group">
               <label for="">Short Description</label>
-              {% render_field productForm.description class="form-control"
-              placeholder="Description" %}
+              {% render_field productForm.description class="form-control" placeholder="Description" %}
             </div>
+
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <label for="">Product Price (Rp.)</label>
-              {% render_field productForm.price class="form-control"
-              placeholder="52" %}
+              <label for="">Product Price ($)</label>
+              {% render_field productForm.price class="form-control" placeholder="52" %}
             </div>
             <div class="form-group">
               <label for="">Product Image</label>
-              {% render_field productForm.product_image class="form-control"
-              placeholder="product_image" %}
+              {% render_field productForm.product_image class="form-control" placeholder="product_image" %}
             </div>
+
+
           </div>
         </div>
         <button type="submit" class="btnSubmit">ADD</button>
